@@ -1,0 +1,38 @@
+
+
+.pagination-container {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .pagination {
+    flex-grow: 1; 
+  }
+  
+  .items-per-page {
+    margin-left: 20px; 
+  }
+  
+  .items-per-page label {
+    margin-right: 10px;
+  }
+  
+  .items-per-page select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .items-per-page select:hover {
+    border-color: #999;
+  }
+  
+  .items-per-page select:focus {
+    outline: none;
+    border-color: #5cb85c;
+  }
+  

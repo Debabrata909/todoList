@@ -1,0 +1,26 @@
+<div class="pagination-container" *ngIf="totalPages > 0">
+  <div class="pagination">
+    <button class="btn btn-primary" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">
+      Previous
+    </button>
+    <button *ngFor="let page of totalPagesArray" class="btn btn-outline-primary" [class.active]="currentPage === page"
+      (click)="onPageChange(page)">
+      {{ page }}
+    </button>
+    <button class="btn btn-primary" [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">
+      Next
+    </button>
+  </div>
+  
+  <div class="items-per-page">
+    <label for="itemsPerPage">Items Per Page:</label>
+    <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange($event)">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+  </div>
+</div>
+
